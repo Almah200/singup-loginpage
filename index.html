@@ -1,0 +1,438 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Shoppinh for mobiles, Electronics, frniture, grocery, lifstyle, Books and more. Best offers!</title>
+    <link rel="icon" href="\img\logo.jpg" type="image/x-icon">
+    <link href="style.css" rel="stylesheet">
+    <script src="cart.js"></script>
+    <script src="https://kit.fontawesome.com/1024979679.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+<body>
+   <!---- Header Section-->
+   <header>
+        <div class="header-left">
+            <a href="#">CashLinkUP</a>
+            <div class="sell">
+                <a href="farmer.php">Sell On CashLinkUp</a>
+            </div>
+            
+        </div>
+   
+   <div class="header-center">
+        <input class="header-center-input" type="text" placeholder="Search for Products"><i class="fa-solid fa-magnifying-glass"></i>
+   </div>
+   <!--- Login button -->
+   <div class="login">
+    <a href="logout.php" class="login_btn">Logout</a>
+    <div class="login_dropdown none">
+        <ul class="login_drop_list">
+            <li class="login_drop_li"><i class="fa-solid fa-circle-user"></i>My Profile</li>
+            <li class="login_drop_li"><i class="fa-solid fa-square-plus"></i>CashLinkUp Plus Zone</li>
+            <li class="login_drop_li"><i class="fa-solid fa-bag-shopping"></i>Order</li>
+            <li class="login_drop_li"><i class="fa-solid fa-heart"></i>Wishlist</li>
+            <li class="login_drop_li"><i class="fa-solid fa-money-bill-1"></i>Rewards</li>
+            <li class="login_drop_li"><i class="fa-solid fa-gift"></i>Gift Cards</li>
+            
+
+        </ul>
+    </div>
+   </div>
+   <!---- More----------->
+   <div class="more">
+    <span class="more_lan">More<i class="fa-solid fa-angle-down"></i></span>
+    <div class="more_dropdown none">
+        <div class="pointer more_pointer"></div>
+        <ul class="more_drop_list">
+            <li class="more_drop_li"><i class="more-icon fa fa-bell"></i>Notification Preferences</li>
+            <li class="more_drop_li"><i class="more-icon fa fa-shopping-basket"></i>Sell On CashLinkUp</li>
+            <li class="more_drop_li"><i class="more-icon fa fa-question"></i>24x7 Customer Care</li>
+            <li class="more_drop_li"><i class="more-icon fa fa-line-chart"></i>Advertise</li>
+            <li class="more_drop_li"><i class="more-icon fa fa-download"></i>Download App</li>
+            
+    </div>
+
+   </div>
+    <!------- cart------------->
+    <span class="cart_lan"><i class="fa fa-cart-plus" id="cart-icon">Cart</i></span>
+    <div class="cart">
+        <h2 class="cart-title">Your Cart</h2>
+        <!---content-->
+        <div class="cart-content">
+            <img src="img\vegetables\kalesv2.jpg" class="cart-img">
+            <div class="detail-box">
+                <div class="cart-product-title">Product1</div>
+                <div class="cart-price">700</div>
+                <input type="number" value="1" class="cart-quantity">
+            </div>
+            <!--- remove product from cart-->
+            <i class="fa-solid fa-trash cart-remove"></i>
+
+        </div>
+        <!---total-->
+        <div class="total">
+            <div class="total-title">Total</div>
+            <div class="total-price"></div>
+        </div>
+        <!---buy button-->
+        <button class="btn-buy">Buy Now</button>
+        <i class="fa-solid fa-rectangle-xmark" id="close-cart"><i>
+    </div>
+    </div>
+</header>
+<!----categories section------>
+<div class="category-row">
+    <div class="category-col">
+        <a href="fruits.html">
+        <img src="img\fruitsnew.jpg" alt="Fruits">
+        <h5 class= "dropbtn">Fruits</h5>
+        </a>
+    </div>
+    <div class="category-col">
+        <a href="cereals.html">
+        <img src="img\cerealsnew.jpg" alt="Cereals">
+       <h5 class="dropbtn">cereals</h5>
+    </a>
+    </div>
+    <div class="category-col">
+        <a href="starchy.html">
+        <img src="img\starchynew.jpg" alt="">
+        <h5 class="dropbtn">Starchy</h5>
+    </a>
+    </div>
+    <div class="category-col">
+        <a href="vegetables.html">
+        <img src="img\vegetablesnew.jpg" alt="">
+        <h5 class="dropbtn">vegetables</h5>
+    </a>
+    </div>
+</div>
+<!-- Deals of the day-->
+<section>
+    <div class="card">
+        <div class="common-heading">
+            <div class="common-heading-left">
+                <h1>Deals of the day</h1><i class="fa-solid fa-timer"></i>
+            </div>
+            <div class="common-heading-right">
+                <button>View All</button>
+            </div>
+        </div>
+        <div class="common-row col-deals">
+            <div class="common-col">
+               <img src="img\merubanana.jpeg" alt=""  class="product-img">
+               <h3 class="product-title">50kgs- 500kgs of Bananas</h3>
+               <h4>Upto 40% off</h4>
+               <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>500</h6>
+               <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+            <!--- two-->
+            <div class="common-col">
+                <img src="img\potatos.jpeg" alt=""  class="product-img">
+                <h3 class="product-title">50kgs to 600kgs Potatos</h3>
+                <h4>Upto 50% off</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>600</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!--- three-->
+             <div class="common-col">
+                <img src="img\sweatpotatos.jpeg" alt=""  class="product-img">
+                <h3 class="product-title">50kgs- 800kgs of sweat Bananas</h3>
+                <h4>Upto 30% off</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>300</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!-- four----->
+             <div class="common-col">
+                <img src="img\onions.jpeg" alt=""  class="product-img">
+                <h3 class="product-title">50kgs- 1000kgs of Onions</h3>
+                <h4>Upto 20% off</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>200</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!------ five----->
+             <div class="common-col">
+                <img src="img\cereals\grainlentisc1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Green Lentis</h3>
+                <h4>$1 per kg</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>200</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!--- 6-->
+             <div class="common-col">
+                <img src="img\cereals\greengramsc1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Green Grams</h3>
+                <h4>$1.5 per kg</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>200</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!-----7-->
+             <div class="common-col">
+                <img src="img\cereals\maizec1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Maize</h3>
+                <h4>$.06 per kg</h4>
+                <h6 class="price">Starts from <i class="fa-solid fa-dollar-sign"></i>200</h6>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+        </div>
+    </div>
+<!---section 2------>
+    <div class="card">
+        <div class="common-row col-deals">
+            <div class="common-col">
+               <img src="img\cereals\milletc1.jpg" alt=""  class="product-img">
+               <h3 class="product-title">Millet</h3>
+               <h4>$1 per kg</h4>
+               <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+            <!--- two-->
+            <div class="common-col">
+                <img src="img\cereals\sorghumc1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Sorghum</h3>
+                <h4>$ 0.5 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!--- three-->
+             <div class="common-col">
+                <img src="img\fruits\bananaf1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Bananas</h3>
+                <h4>$2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!---- 4-->
+             <div class="common-col">
+                <img src="img\fruits\grapesf1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Grapes</h3>
+                <h4>$3 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----5-->
+             <div class="common-col">
+                <img src="img\fruits\bananaf3.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Bananas</h3>
+                <h4>$2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----6-->
+             <div class="common-col">
+                <img src="img\fruits\mandarinorangesf3.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Mandarin Oranges</h3>
+                <h4>$2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----7-->
+             <div class="common-col">
+                <img src="img\fruits\mangof1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Mangos</h3>
+                <h4>$5 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+        </div>
+        </div>
+             <!---section 3------>
+    <div class="card">
+        <div class="common-row col-deals">
+            <div class="common-col">
+               <img src="img\fruits\mangof2.jpg" alt=""  class="product-img">
+               <h3 class="product-title">Mangos</h3>
+               <h4>$6 per kg</h4>
+               <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+            </div>
+            <!--- two-->
+            <div class="common-col">
+                <img src="img\fruits\orangef1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Oranges</h3>
+                <h4>$ 2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!--- three-->
+             <div class="common-col">
+                <img src="img\fruits\ovacadof1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Ovacando</h3>
+                <h4>$2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!---- 4-->
+             <div class="common-col">
+                <img src="img\fruits\pineaplef2.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Pineaples</h3>
+                <h4>$10 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----5-->
+             <div class="common-col">
+                <img src="img\fruits\quovaf1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Quova</h3>
+                <h4>$2 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----6-->
+             <div class="common-col">
+                <img src="img\starchy\casavas1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Cassava</h3>
+                <h4>$5 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+             <!----7-->
+             <div class="common-col">
+                <img src="img\starchy\potatos1.jpg" alt=""  class="product-img">
+                <h3 class="product-title">Potatos</h3>
+                <h4>$10 per Kg</h4>
+                <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+             </div>
+        </div>
+        </div>
+            <!----- four---->
+             <div class="card">
+                <div class="common-row col-deals">
+                    <div class="common-col">
+                       <img src="img\vegetables\cabagev2.jpg" alt=""  class="product-img">
+                       <h3 class="product-title">Cabbage</h3>
+                       <h4>$60 per kg</h4>
+                       <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                    </div>
+                    <!--- two-->
+                    <div class="common-col">
+                        <img src="img\vegetables\onionsv1.jpg" alt=""  class="product-img">
+                        <h3 class="product-title">Onions</h3>
+                        <h4>$300 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     <!--- three-->
+                     <div class="common-col">
+                        <img src="img\vegetables\spinachv1.jpg" alt=""  class="product-img">
+                        <h3 class="product-title">Spinach</h3>
+                        <h4>$2 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     <!---- 4-->
+                     <div class="common-col">
+                        <img src="img\starchy\sweats1.jpg" alt=""  class="product-img">
+                        <h3 class="product-title">Sweat potatoes</h3>
+                        <h4>$10 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     <!----5-->
+                     <div class="common-col">
+                        <img src="img\starchy\yams2.jpg" alt=""  class="product-img">
+                        <h3 class="product-title">Yams</h3>
+                        <h4>$2 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     <!----6-->
+                     <div class="common-col">
+                        <img src="img\fruits\bananaf2.jpg" alt=""  class="product-img">
+                        <h3 class="product-title">Banana</h3>
+                        <h4>$5 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     <!----7-->
+                     <div class="common-col">
+                        <img src="img\merubanana.jpeg" alt=""  class="product-img">
+                        <h3 class="product-title">Banaa</h3>
+                        <h4>$10 per Kg</h4>
+                        <i class="fa-solid fa-bag-shopping" id="add-cart"></i>
+                     </div>
+                     </div>
+                     </div>
+        </section>
+
+
+<!------Footer section----->
+<footer>
+<div class="footer-row">
+    <div class="footer-col-1">
+        <div class="footer-heading">
+            <p>ABOUT</p>
+        </div>
+        <div class="footer-list">
+            <a href="a">Contact Us</a>
+            <a href="a">About Us</a>
+            <a href="a">Contact Us</a>
+            <a href="a">Careers</a>
+            <a href="a">CashLinkUp Stories</a>
+            <a href="a">Press</a>
+            <a href="a">CashLinkUp WholseSales</a>
+        </div>
+    </div>
+    <div class="footer-col-2">
+        <div class="footer-heading">
+            <p>HELP</p>
+        </div>
+        <div class="footer-list">
+            <a href="a">Payments</a>
+            <a href="a">Shipping</a>
+            <a href="a">Cancellation & Returns</a>
+            <a href="a">FAQ</a>
+            <a href="a">Press</a>
+            <a href="a">Report Infringement</a>
+        </div>
+    </div>
+    <div class="footer-col-3">
+        <div class="footer-heading">
+            <p>POLICY</p>
+        </div>
+        <div class="footer-list">
+            <a href="a">Return Policy</a>
+            <a href="a">Term of Use</a>
+            <a href="a">Security</a>
+            <a href="a">Privacy</a>
+            <a href="a">Sitemap</a>
+            <a href="a">ERP Compliance</a>
+        </div>
+    </div>
+    <div class="footer-col-4">
+        <div class="footer-heading">
+            <p>SOCIAl</p>
+        </div>
+        <div class="footer-list">
+            <a href="a">FaceBook</a>
+            <a href="a">YouTube</a>
+            <a href="a">Twitter</a>
+        </div>
+    </div>
+    <div class="footer-col-5">
+        <div class="footer-heading">
+            <p>MAIL US</p>
+        </div>
+        <div class="footer-list">
+            <p>
+                CashLinkUp Food Private Limited,
+                Building hyrax, Kampala,
+                1005000, Kampala, Uganda
+            </p>
+        </div>
+    </div>
+    <div class="footer-col-6">
+        <div class="footer-heading">
+            <p>REGISTERED OFFICE ADDRESS</p>
+        </div>
+        <div class="footer-list">
+            <p>CashLinkUp Food Private Limited, </p>
+            <p>Building hyrax, Kampala, </p>
+            <p>1005000, Kampala, Uganda </p>
+            <P>Phone: +254740627150</p>
+        </div>
+        </div>
+</div>
+<div class="footer-row2">
+    <div class="footer-row2-col">
+        <p><i class="fas fa-shopping-bag"></i>Sell On CashLinkUp</p>
+    </div>
+    <div class="footer-row2-col">
+        <p><i class="fas fa-star"></i>Advertise</p>
+    </div>
+    <div class="footer-row2-col">
+        <p><i class="fas fa-gift"></i>Gift Cards</p>
+    </div>
+    <div class="footer-row2-col">
+        <p><i class="fas fa-question-circle"></i>Help Center</p>
+    </div>
+    <div class="footer-row2-col">
+        <p>@ 2023-2025 CashLinkUp.com</p>
+    </div>
+</div>
+</footer>
+</body>
+</html>

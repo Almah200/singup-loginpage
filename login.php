@@ -12,7 +12,7 @@ if (isset($_SESSION["user"])) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login Form</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="php.style.css">
 </head>
 <body>
     <div class="container">
@@ -28,7 +28,7 @@ if (isset($_SESSION["user"])) {
                 if (password_verify($password, $user["password"])) {
                     session_start();
                     $_SESSION["user"] = "yes";
-                    header("Location: index.php");
+                    header("Location: index.html");
                     die();
                 }else{
                     echo "<div class='alert alert-danger'>Password does not match</div>";
@@ -38,6 +38,9 @@ if (isset($_SESSION["user"])) {
             }
         }
         ?>
+        <div class="div">
+            <h1>Log in to view/order products from CashLinkUp</h1>
+        </div>
       <form action="login.php" method="post">
         <div class="form-group">
             <input type="email" placeholder="Enter Email:" name="email" class="form-control">

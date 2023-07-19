@@ -12,29 +12,26 @@
     <div class="container">
         <?php
         if (isset($_POST["submit"])){
-            $fullname = $_POST["fullname"];
+            $names = $_POST["names"];
+            $sex=$_POST["sex"];
+            $location=$_POST["location"];
+            $Phone=$_POST["Phone"];
             $email = $_POST["email"];
-            $password = $_POST["password"];
-            $passwordRepeat = $_POST["repeat_password"];
-           
-            $passwordHash = password_hash($password, PASSWORD_DEFAULT);
+            $product=$_POST["product"];
             
             $errors = array();
             
-            if (empty($fullname) OR empty($email) OR empty($password) or empty($passwordRepeat)) {
+            if (empty($names) OR empty($sex) OR empty($location) OR empty($Phone) OR empty($email) or empty($product)) {
                 array_push($errors, "All fields are required");
             }
             if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
                 array_push($errors, "Email is not Valid");
             }
-            if (strlen($password)<8) {
-                array_push($errors, "Password must be at least 8 characters long");
-            }
-            if ($password!==$passwordRepeat) {
-                array_push($errors, "Password doesn't match");
+            if (strlen($Phone)<10 OR strlen($Phone)>12) {
+                array_push($errors, "Phone number must be at least 10 to 12 characters long");
             }
 
-            require_once "database.php";
+            require_once "farmersdatabase.php";
             $sql = "SELECT * FROM users WHERE email = '$email'";
             $result = mysqli_query($conn, $sql);
             $rowCount = mysqli_num_rows($result);
@@ -49,9 +46,9 @@
             }else {
                
                 $stmt = mysqli_stmt_init($conn);
-                $sql = "INSERT INTO users (full_name, email, password) VALUES (?, ?, ?)";
+                $sql = "INSERT INTO farmers_data (names, sex, location, Phone, email, product) VALUES (?, ?, ?, ?, ?, ?)";
                 if (mysqli_stmt_prepare($stmt, $sql)) {
-                    mysqli_stmt_bind_param($stmt, "sss", $fullname, $email, $passwordHash);
+                    mysqli_stmt_bind_param($stmt, "ssssss", $names, $sex, $location, $Phone, $email, $product);
                     mysqli_stmt_execute($stmt);
                     echo "<div class='alert alert-success'>Registration successful!</div>";
                 } else {
@@ -61,27 +58,33 @@
             }
         }
         ?>
-        <form action="registration.php" method="post">
+        <form action="farmer.php" method="post">
             <div class="form-group">
-                <input type="text" class="form-control" name="fullname" placeholder="Full Name:">
+                <input type="text" class="form-control" name="names" placeholder="Full Name:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="sex" placeholder="Sex:">
+            </div>
+            <div class="form-group">
+                <input type="text" class="form-control" name="location" placeholder="Location:">
+            </div>
+            <div class="form-group">
+                <input type="number" class="form-control" name="Phone" placeholder="Phone Number:">
             </div>
             <div class="form-group">
                 <input type="email" class="form-control" name="email" placeholder="Email:">
             </div>
             <div class="form-group">
-                <input type="password" class="form-control" name="password" placeholder="Password:">
-            </div>
-            <div class="form-group">
-                <input type="text" class="form-control" name="repeat_password" placeholder="Repeat_password:">
+                <input type="text" class="form-control" name="product" placeholder="Product description:">
             </div>
             <div class="form-btn">
                 <input type="submit" class="btn btn-primary" value="Register" name="submit">
             </div>
         </form>
-        <div>
-        <div><p>Already Registered <a href="login.php">Login Here</a></p></div>
-      </div>
     </div>
+    <div>
+        <div><p>Wants to Buy? <a href="login.php">Login Here</a></p></div>
+      </div>
     
 </body>
 </html>
